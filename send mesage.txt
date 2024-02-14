@@ -1,0 +1,1 @@
+curl -X POST -H "Content-Type: application/json" -d "{\"user_id\": 208, \"message_body\": \"Hello, this is a test message.\"}" http://127.0.0.1:5000/api/send_message

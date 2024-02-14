@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agent Portal</title>
+</head>
+<body>
+    <h1>Welcome to the Agent Portal</h1>
+    <div>
+        <h2>Messages:</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>User ID</th>
+                    <th>Timestamp</th>
+                    <th>Message Body</th>
+                    <th>Response</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for message in messages %}
+                <tr>
+                    <td>{{ message.userid }}</td>
+                    <td>{{ message.timestamp }}</td>
+                    <td>{{ message.message_body }}</td>
+                    <td>{{ message.response }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <form action="/logout" method="post">
+        <button type="submit">Logout</button>
+    </form>
+</body>
+</html>
